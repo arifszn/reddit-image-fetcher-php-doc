@@ -1,1 +1,0 @@
-# reddit-image-fetcher-php-doc
