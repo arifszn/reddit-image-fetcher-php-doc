@@ -41,7 +41,7 @@ It can be used other than fetching memes and wallpapers.
 
 ```php 
 $redditImageFetcher->fetch(
-    'other',
+    'custom',
     50, 
     ['cats', 'Catswhoyell', 'sleepingcats']
 ); //returns 50 cat images
