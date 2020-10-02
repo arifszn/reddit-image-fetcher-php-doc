@@ -60,11 +60,14 @@ const features = [
   }
 ];
 
-/* function Feature({title, description}) {
+function Feature({title, description}) {
   return (
-    
+    <div className={clsx('col col--4 text--center p-4', styles.feature)}>
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </div>
   );
-} */
+}
 
 function Home() {
   const context = useDocusaurusContext();
@@ -124,65 +127,10 @@ function Home() {
         {features && features.length > 0 && (
           <section className={styles.features}>
             <div className="container">
-              <div className="row">
-                <div className={styles.section}>
-                  <div className="container text--center">
-                    <div className="row">
-                      <div className="col py-4">
-                        <h2 className={clsx(styles.featureHeading)}>
-                          {features[0].title}
-                        </h2>
-                        <p className="padding-horiz--md">
-                          {features[0].description}
-                        </p>
-                      </div>
-                      <div className="col py-4">
-                        <h2 className={clsx(styles.featureHeading)}>
-                          {features[1].title}
-                        </h2>
-                        <p className="padding-horiz--md">
-                          {features[1].description}
-                        </p>
-                      </div>
-                      <div className="col py-4">
-                        <h2 className={clsx(styles.featureHeading)}>
-                          {features[2].title}
-                        </h2>
-                        <p className="padding-horiz--md">
-                          {features[2].description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="container text--center">
-                    <div className="row">
-                      <div className="col col--4 py-4">
-                        <h2 className={clsx(styles.featureHeading)}>
-                          {features[3].title}
-                        </h2>
-                        <p className="padding-horiz--md">
-                          {features[3].description}
-                        </p>
-                      </div>
-                      <div className="col col--4 py-4">
-                        <h2 className={clsx(styles.featureHeading)}>
-                          {features[4].title}
-                        </h2>
-                        <p className="padding-horiz--md">
-                          {features[4].description}
-                        </p>
-                      </div>
-                      <div className="col col--4 py-4">
-                        <h2 className={clsx(styles.featureHeading)}>
-                          {features[4].title}
-                        </h2>
-                        <p className="padding-horiz--md">
-                          {features[4].description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div className="row justify-content-center">
+                {features.map((props, idx) => (
+                  <Feature key={idx} {...props} />
+                ))}
               </div>
             </div>
           </section>
