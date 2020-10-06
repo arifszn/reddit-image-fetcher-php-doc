@@ -18,7 +18,7 @@ module.exports = {
       darkTheme: require('prism-react-renderer/themes/palenight'),
     },
     announcementBar: {
-      id: 'support_us_1', // Any value that will identify this message.
+      id: 'reddit_image_fetcher_php_support_us', // Any value that will identify this message.
       content:
         '⭐️ If you like this project, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/arifszn/reddit-image-fetcher-php">GitHub</a>! ⭐️',
       backgroundColor: '#fafbfc', // Defaults to `#fff`.
