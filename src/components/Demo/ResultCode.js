@@ -10,7 +10,9 @@ const ResultCode = [
     NSFW: false,
     spoiler: false,
     createdUtc: 1593066557,
-    
+    upvotes: 1899,
+    downvotes: 0,
+    upvoteRatio: 1.0
   },
   {
     id: "h9glhi",
@@ -22,7 +24,10 @@ const ResultCode = [
     subreddit: "ImaginaryFuturism",
     NSFW: false,
     spoiler: false,
-    createdUtc: 1592228591
+    createdUtc: 1592228591,
+    upvotes: 462,
+    downvotes: 0,
+    upvoteRatio: 1.0
   }
 ];
 
