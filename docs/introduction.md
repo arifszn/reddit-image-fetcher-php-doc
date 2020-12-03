@@ -1,6 +1,6 @@
 ---
 id: introduction
-title: Reddit Image Fetcher
+title: Introduction
 sidebar_label: Introduction
 slug: /
 ---
