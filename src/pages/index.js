@@ -8,6 +8,7 @@ import styles from './styles.module.css';
 import ReactiveButton from 'reactive-button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import 'iziToast/dist/css/iziToast.css';
 
 const features = [
   {
@@ -77,16 +78,32 @@ function Home() {
 
   useEffect(() => {
     setShowGetStartedButton(true);
+
+    if (typeof window !== "undefined") {
+        const iziToast = require('izitoast');
+
+        iziToast.show({
+            timeout: 0,
+            progressBar: false,
+            displayMode: 'once',
+            theme: 'light',
+            id: 'star-notification',
+            title: '<a target="_blank" rel="noopener noreferrer" href="https://github.com/arifszn/reddit-image-fetcher-php"><img src="https://img.shields.io/github/stars/arifszn/reddit-image-fetcher-php?style=social" alt="Github Star"/></a>',
+            message: 'We need your support. Please ⭐️ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/arifszn/reddit-image-fetcher-php">GitHub</a> to help us increase.'
+        });
+    }
   }, []);
 
   return (
     <Layout
-      description={`${siteConfig.tagline}`}>
+      title={siteConfig.title}
+      description={`${siteConfig.tagline}`}
+    >
       <header className={clsx('hero ', styles.heroBanner)}>
         <div className="container">
           <div className="text--center">
             <img
-              alt="Reddit Image Fetcher"
+              alt="Reddit Image Fetcher PHP"
               className={styles.logo}
               src={useBaseUrl('img/logo/logo.png')}
             />
@@ -102,7 +119,6 @@ function Home() {
               to={useBaseUrl('docs/')}>
               <ReactiveButton
                 style={{ display: showGetStartedButton ? 'block' : 'none' }}
-                color={'dark'}
                 size={"large"}
                 idleText={<span>Get Started &nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight}/></span>}
                 width={'170px'}

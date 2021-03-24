@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Reddit Image Fetcher',
-  tagline: 'A PHP package for fetching reddit images, memes, wallpapers and more',
+  tagline: 'A PHP package for fetching reddit images, memes, wallpapers and more.',
   url: 'https://arifszn.github.io',
   baseUrl: '/reddit-image-fetcher-php/',
   onBrokenLinks: 'throw',
@@ -82,7 +82,6 @@ module.exports = {
           customCss: require.resolve('./src/css/custom.css'),
         },
         sitemap: {
-          cacheTime: 600 * 1000, // 600 sec - cache purge period
           changefreq: 'weekly',
           priority: 0.5,
           trailingSlash: false,
